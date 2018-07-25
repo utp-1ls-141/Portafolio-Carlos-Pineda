@@ -1,0 +1,11 @@
+1. Leer 3 texbox, t1, t2, t3, comprobar si los 3 textos son ISOMORFICOS
+2. Leer 1 texbox "n" , generar una matriz "nxn", donde la diagonal principal sea multiplo de "23"
+y la diagonal secundaria sea un numero primo.
+-> nota: considerar su n es impar.
+3. Leer 1 texbox, "numero", calcular si ese numero es doblemente palindromo (palindromo en Base 10 
+y Base2).
+Consideraciones:
+- 1 solo html
+- js en un archivo aparte
+- los resultados deben mostrarse en modal
+- boostrap

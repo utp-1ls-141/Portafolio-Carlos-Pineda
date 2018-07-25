@@ -1,0 +1,4 @@
+Escriba un programa en jscrip 
+dada la insersion de datotos varifique que si es una cadena hisomorfica
+
+Buscar Notacion Big O

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<form id="form1">
+    <input name= "oracion1" type="text"><br>
+    <input name= "oracion2" type="text">
+</form>
+
+<form >
+    <button onclick="respuesta()">efectuar</button>
+</form>
+
+    <script>
+        var str1,str2,datos;
+
+      
+
+
+        function isomor() {
+            datos = document.getElementById("form1");
+            str1=datos.elements[0].value;
+            str2=datos.elements[1].value;
+
+            if (str1.length !== str2.length) {
+                return false;
+            }
+            var map = {};
+            
+            for(var i = 0; i < str1.length; i++) {
+                var a = str1[i]; 
+                var b = str2[i];
+                if (typeof map[a] === "undefined") {
+                    map[a] = b;
+
+               
+                } else if (map[a] !== b) {
+                    return false;
+                }
+
+                for (var key in map) {
+                    if (key !== a && b === map[key]) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        
+        function respuesta (){
+                if (isomor()==true){
+                document.write("es isomorfica");
+            }
+            else {
+                document.write("no es isomorfica");
+            }
+           
+            document.write("<br>"+str1+"<br>");
+            document.write(str2);
+        }
+
+        
+    </script>
+
+
+</body>
+</html>

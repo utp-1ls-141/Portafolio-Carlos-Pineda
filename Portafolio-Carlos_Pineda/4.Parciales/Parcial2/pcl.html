@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parcial #2</title>
+        <!-- Bootstrap de la carpeta -->
+        <link rel="stylesheet" href="./static/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./static/vendor/bootstrap/js/bootstrap.min.js">
+
+</head>
+<body>
+
+        <h1 class= "col-8 offset-2 text-center">Parcial 2</h1>
+        <h3>Problema 1</h3>
+        <p>Leer 3 texbox, t1, t2, t3, comprobar si los 3 textos son ISOMORFICOS.</p>
+        
+        <h3>Problema 2</h3>
+        <p>Leer 1 texbox "n" , generar una matriz "nxn", donde la diagonal principal sea multiplo de "23" y la diagonal secundaria sea un numero primo. -> nota: considerar su n es impar.</p>
+
+        <h3>Problema 3</h3>
+        <p>Leer 1 texbox, "numero", calcular si ese numero es doblemente palindromo (palindromo en Base 10 y Base2).</p>
+                
+        <!-- MODAL -->
+        <div class="container">  
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Resultado:</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body" id="resiso">
+                        <p>No deberias ver esto.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+            <!-- MODAL FIN -->
+    
+            <table class= "col-8 offset-2 table-bordered text-center ">
+                    <tr>
+                        <th class="bg-primary">Problema 1</th>
+                        <th class="bg-primary">Problema 2</th>
+                        <th class="bg-primary">Problema 3</th>
+                    </tr>
+        
+        
+                    <tr >
+                        <td >
+                            <form name="formulario" method="POST"  class="d-flex justify-content-center">
+        
+                                <table>
+                                    <tr>
+                                        <td>Cadena 1</td>
+                                        <td><input type="text" name="str1" required class="form-group"></td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>Cadena 2</td>
+                                        <td><input type="text" name="str2" required class="form-group"></td>
+                                    </tr>
+      
+                                    <tr>
+                                        <td>Cadena 3</td>
+                                        <td><input type="text" name="str3" required class="form-group"></td>
+                                    </tr>
+          
+                                    <tr>
+                                        <td colspan="2"><input type="button" onclick="Calculo()" value="Procesar"></td>
+                                    </tr>
+                                </table>
+        
+                            </form>
+                        </td>
+                    
+                        <td>
+                            <form name="formulario2" method="POST" class="d-flex justify-content-center">
+        
+                                <table>
+                                    <tr>
+                                        <td>Numeros</td>
+                                        <td><input type="number" min="0" name="str4" required class="form-group"></td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td colspan="2"> <input type="button" onclick="Calculo2()" value="Procesar"></td>
+                                    </tr>
+                                </table>
+                            
+                            </form>
+                        </td>
+                        
+                        <td>
+                                <form name="formulario3" method="POST" class="d-flex justify-content-center">
+            
+                                    <table>
+                                        <tr>
+                                            <td>Numeros</td>
+                                            <td><input type="number" step="1" name="str4" required class="form-group"></td>
+                                        </tr>
+            
+                                        <tr>
+                                            <td colspan="2"> <input type="button" onclick="Calculo3()" value="Procesar"></td>
+                                        </tr>
+                                    </table>
+                                
+                                </form>
+                            </td>
+                    </tr>
+                </table>
+      
+    <script src="./static/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="./static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="./static/js/programa.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/bootstrap/js/bootstrap.min.js">
+    <title>Cadena Isomorfica</title>
+</head>
+<body>
+    <div class="col-md-8 offset-md-2 col-sm-6 offset-sm-3 col-xs-12">
+        <center><h1>Cadena Hisomorfica</h1></center>
+        <br><br>
+        
+        <form name="NoInternet">
+            <div class="form-group">
+                <label for="cadena1">Texto #1</label>
+                <input type="text" class="form-control" name="text1" id="cadena1" placeholder="Incerte texto">
+            </div>
+            <div class="form-group">
+                <label for="cadena2">Texto #2</label>
+                <input type="text" class="form-control" name="text2" id="cadena2" placeholder="Incerte texto">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="isIsomorphic(cad1, cad2)">Ingresar</button>
+        </form>
+    </div>
+
+    
+    <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="vendor/jquery/ishorp.js"></script>-->
+    <script>
+        function isIsomorphic(cad1, cad2){
+            var txt1 = " ";
+            var txt2 = " ";
+            txt1 = document.getElementById("cad1").value; 
+            txt2 = document.getElementById("cad2").value;
+            if(txt1==null || txt2==null){
+                alert("Las Cadenas esta vacias!!");
+            }
+            else if(txt1.length != txt2.length){
+                alert("El longitud de las palabras no conciden");
+            }
+        } 
+    </script> 
+</body>
+</html>

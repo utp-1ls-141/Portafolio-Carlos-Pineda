@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./vendor/Bootstrap/css/bootstrap.min.css">
+    <title>Isomorficos </title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-md-8 offset-md-2 col-sm-6 offset-sm-3 col-xs-12">
+            <br>
+            <h2> <center>Isomorficos</center> </h2>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-md-8 offset-md-2 col-sm-6 offset-sm-3 col-xs-12">
+        <form class="form-signin align-items-center" id="iso">
+            <label for="">#1</label>
+            <input type="text" class="form-control" placeholder="palabra" required id="cad1">
+            <br> <br>
+            <label for="">#2</label>
+            <input type="text" class="form-control" placeholder="palabra" required id="cad2">
+            <br> <br>
+            <button class="btn btn-primary" onclick="respuesta()"> Enviar </button>
+        </form>
+        </div>
+    </div>
+    </div>
+    <script src="./vendor/Jquery/jquery-3.2.1.min.js"> </script>
+    <script src="./vendor/Bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        var cad1, cad2, data;
+        function isomorphic(){
+            
+            data = document.getElementById("iso");
+            cad1 = data.elements[0].value;
+            cad2 = data.elements[1].value;
+
+            if(cad1.length !== cad2.length){
+                
+                return false;
+            }
+
+            var map = {};
+
+            for(var i = 0; i<cad1.length; i++){
+                var x = cad1[i];
+                var y = cad2[i];
+
+            
+
+                if(typeof map[a] === "undefined"){
+                    map[a] = b;
+                }
+                else if(map[a] !== b){
+            
+                    return false;
+                }
+
+                for(var key in map){
+                    if(key !== a && b === map[key]){
+                        alert("entra");
+            
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        function respuesta(){
+            if(isomorphic()==true){
+                document.write("Las cadena es isomorfica.");
+            }
+            else{
+                document.write("La cadena no es isomorfica.");
+            }
+
+            document.write("<br>"+cad1+"<br>");
+            document.write(cad2);
+        }
+    </script>
+
+</body>
+</html>
